@@ -42,7 +42,7 @@ export class TabellaComponent implements OnInit {
 
   getPersone(){
     this.persone.getpersone().subscribe(p =>{
-      console.table(p.data);
+      // console.table(p.data);
       
       this.personeArray = p.data;
     })
