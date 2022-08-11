@@ -1,11 +1,13 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
+import { ContrattiApiService } from 'src/app/service/contratti-api.service';
+import { personeApiService } from 'src/app/service/persone-api.service';
 import { AziendeApiService } from 'src/app/service/aziende-api.service';
 
 export interface PeriodicElement {
-  name: string;
-  persona_nome: string;
-  persona_cognome: string;
-  persona_mail: any;
+  // name: string;
+  // persona_nome: string;
+  // persona_cognome: string;
+  // persona_mail: any;
 }
 
 // const ELEMENT_DATA: PeriodicElement[] = [
@@ -28,24 +30,28 @@ export interface PeriodicElement {
 })
 export class TabellaComponent implements OnInit {
 
-  displayedColumns: string[] = ['persona_nome', 'persona_cognome', 'persona_mail'];
-  dataSource = [];
-  personeArray : any = [];
+  @Input() displayedColumns : any;
+  @Input() dataSource : any;
+
+  
+  
 
   constructor(
-    public persone: AziendeApiService
+    public persone: personeApiService,
+    public contratti: ContrattiApiService,
+    public aziende: AziendeApiService
   ) { }
 
   ngOnInit() {
-    this.getPersone();
+    // this.getPersone();
   }
 
-  getPersone(){
-    this.persone.getpersone().subscribe(p =>{
-      // console.table(p.data);
+  // getPersone(){
+  //   this.persone.getpersone().subscribe(p =>{
+  //     // console.table(p.data);
       
-      this.personeArray = p.data;
-    })
-  }
+  //     this.personeArray = p.data;
+  //   })
+  // }
 
 }

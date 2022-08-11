@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { AziendeApiService } from 'src/app/service/aziende-api.service';
+import { personeApiService } from 'src/app/service/persone-api.service';
 
 export interface PeriodicElement {
   name: string;
@@ -15,12 +15,12 @@ export interface PeriodicElement {
 })
 export class PersoneComponent implements OnInit {
 
-  displayedColumns: string[] = ['persona_nome', 'persona_cognome', 'persona_mail'];
+  columns: string[] = ['persona_nome', 'persona_cognome', 'persona_mail'];
   dataSource = [];
   personeArray : any = [];
 
   constructor(
-    public persone: AziendeApiService
+    public persone: personeApiService
   ) { }
   
   ngOnInit() {

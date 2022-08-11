@@ -1,6 +1,9 @@
 <h1>contratti</h1>
 
 <div class="w-100">
-  <app-tabella></app-tabella>
+  <app-tabella
+  [displayedColumns]="columns"
+  [dataSource]="contrattiArray">
+</app-tabella> 
 </div>
 

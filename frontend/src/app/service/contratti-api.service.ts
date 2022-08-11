@@ -6,7 +6,7 @@ import { Observable } from 'rxjs';
 @Injectable({
   providedIn: 'root'
 })
-export class AziendeApiService {
+export class ContrattiApiService {
 
   apiUrl = environment.apiUrl;
 
@@ -14,7 +14,7 @@ export class AziendeApiService {
     private http: HttpClient
   ) { }
 
-  getAziende() : Observable<any>{
-    return this.http.get<any>(`${this.apiUrl}azienda`);
+  getContratti() : Observable<any>{
+    return this.http.get<any>(`${this.apiUrl}contratti`);
   }
 }
