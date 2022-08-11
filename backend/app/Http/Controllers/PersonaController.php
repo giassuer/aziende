@@ -46,7 +46,6 @@ class PersonaController extends Controller
 
     public function create(Request $request){
       
-
         try {
             $this->validate($request, [
                 'persona_nome' => 'required',

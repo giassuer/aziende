@@ -13,6 +13,7 @@ import { HomeComponent } from './componenti/pagine/home/home.component';
 import { TabellaComponent } from './componenti/tabella/tabella.component';
 import { AziendeComponent } from './componenti/pagine/aziende/aziende.component';
 import {MatTableModule} from '@angular/material/table';
+import { HttpClient, HttpClientModule } from '@angular/common/http';
 
 
 @NgModule({
@@ -24,14 +25,16 @@ import {MatTableModule} from '@angular/material/table';
     PersoneComponent,
     ContrattiComponent,
     TabellaComponent,
-    AziendeComponent
+    AziendeComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     NoopAnimationsModule,
     NgbModule,
-    MatTableModule
+    MatTableModule,
+    HttpClientModule
+    
   ],
   providers: [],
   bootstrap: [AppComponent]
