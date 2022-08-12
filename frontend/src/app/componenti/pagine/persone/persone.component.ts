@@ -1,12 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { personeApiService } from 'src/app/service/persone-api.service';
 
-export interface PeriodicElement {
-  name: string;
-  persona_nome: string;
-  persona_cognome: string;
-  persona_mail: any;
-}
 
 @Component({
   selector: 'app-persone',

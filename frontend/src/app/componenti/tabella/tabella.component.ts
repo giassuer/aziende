@@ -4,6 +4,7 @@ import { personeApiService } from 'src/app/service/persone-api.service';
 import { AziendeApiService } from 'src/app/service/aziende-api.service';
 import { MatDialog } from '@angular/material/dialog';
 import { ModaleComponent } from '../modale/modale.component';
+import { FormControl } from '@angular/forms';
 
 
 
@@ -20,7 +21,7 @@ export class TabellaComponent implements OnInit {
   @Input() dataSource : any;
   @Input() NomeTabella: any;
   
-  
+  // formField : FormControl = new FormControl('ciao!!!');
 
   constructor(
     public persone: personeApiService,
@@ -30,7 +31,6 @@ export class TabellaComponent implements OnInit {
   ) { }
 
   ngOnInit() {
-    console.log(this.NomeTabella);
     
     // this.getPersone();
   }

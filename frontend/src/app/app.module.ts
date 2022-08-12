@@ -15,7 +15,9 @@ import { AziendeComponent } from './componenti/pagine/aziende/aziende.component'
 import {MatTableModule} from '@angular/material/table';
 import {MatDialogModule} from '@angular/material/dialog';
 import { HttpClient, HttpClientModule } from '@angular/common/http';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { ModaleComponent } from './componenti/modale/modale.component';
 
 
 @NgModule({
@@ -28,7 +30,7 @@ import { FormsModule } from '@angular/forms';
     ContrattiComponent,
     TabellaComponent,
     AziendeComponent,
-    
+    ModaleComponent
   ],
   imports: [
     BrowserModule,
@@ -38,8 +40,9 @@ import { FormsModule } from '@angular/forms';
     MatTableModule,
     HttpClientModule,
     MatDialogModule,
-    FormsModule
-    
+    FormsModule,
+    ReactiveFormsModule,
+    MatFormFieldModule
   ],
   providers: [],
   bootstrap: [AppComponent]
