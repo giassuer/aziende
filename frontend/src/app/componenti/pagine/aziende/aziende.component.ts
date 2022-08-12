@@ -8,7 +8,7 @@ import { AziendeApiService } from 'src/app/service/aziende-api.service';
 })
 export class AziendeComponent implements OnInit {
 
-  columns: string[] = ['azienda_nome', 'azienda_indirizzo'];
+  columns: string[] = ['azienda_nome', 'azienda_indirizzo', 'azioni'];
   dataSource = [];
   aziendeArray : any = [];
 

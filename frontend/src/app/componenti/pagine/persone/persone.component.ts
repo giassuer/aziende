@@ -15,7 +15,7 @@ export interface PeriodicElement {
 })
 export class PersoneComponent implements OnInit {
 
-  columns: string[] = ['persona_nome', 'persona_cognome', 'persona_mail'];
+  columns: string[] = ['persona_nome', 'persona_cognome', 'persona_mail', 'azioni'];
   dataSource = [];
   personeArray : any = [];
 
@@ -29,7 +29,6 @@ export class PersoneComponent implements OnInit {
 
   getPersone(){
     this.persone.getpersone().subscribe(p =>{
-      console.table(p.data);
       
       this.personeArray = p.data;
     })

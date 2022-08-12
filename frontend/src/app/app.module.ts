@@ -13,7 +13,9 @@ import { HomeComponent } from './componenti/pagine/home/home.component';
 import { TabellaComponent } from './componenti/tabella/tabella.component';
 import { AziendeComponent } from './componenti/pagine/aziende/aziende.component';
 import {MatTableModule} from '@angular/material/table';
+import {MatDialogModule} from '@angular/material/dialog';
 import { HttpClient, HttpClientModule } from '@angular/common/http';
+import { FormsModule } from '@angular/forms';
 
 
 @NgModule({
@@ -26,6 +28,7 @@ import { HttpClient, HttpClientModule } from '@angular/common/http';
     ContrattiComponent,
     TabellaComponent,
     AziendeComponent,
+    
   ],
   imports: [
     BrowserModule,
@@ -33,7 +36,9 @@ import { HttpClient, HttpClientModule } from '@angular/common/http';
     NoopAnimationsModule,
     NgbModule,
     MatTableModule,
-    HttpClientModule
+    HttpClientModule,
+    MatDialogModule,
+    FormsModule
     
   ],
   providers: [],

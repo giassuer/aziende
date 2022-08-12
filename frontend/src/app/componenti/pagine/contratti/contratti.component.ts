@@ -15,7 +15,7 @@ export interface PeriodicElement {
 })
 export class ContrattiComponent implements OnInit {
 
-  columns: string[] = ['contratto_intestatario', 'contratto_progetto'];
+  columns: string[] = ['contratto_intestatario', 'contratto_progetto', 'azioni'];
   dataSource = [];
   contrattiArray : any = [];
 
