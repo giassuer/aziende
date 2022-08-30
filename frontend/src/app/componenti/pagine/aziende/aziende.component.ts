@@ -18,6 +18,8 @@ export class AziendeComponent implements OnInit {
 
   ngOnInit() {
     this.getAziende();
+    console.log("arrivo Azieda");
+    
   }
 
   getAziende(){

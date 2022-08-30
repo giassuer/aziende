@@ -1,8 +1,23 @@
 
 <h1>{{data.id}}</h1>
 <h2>Kevin ha {{data.type}}</h2>
-<form [formGroup]="form">
-  <input type="text" formControlName="nome">
+<form *ngIf="data.type == 'Persone' "[formGroup] = formPersone  >
+  <input type="text" formControlName="persona_nome">
+  <input type="text" formControlName="persona_cognome">
+  <input type="text" formControlName="persona_mail">
+  <button class="btn" type="submit" (click)="salva()">salva</button>
   <!-- <input type="text" placeholder="" formControlNameName = "nome2"> -->
   <!-- <input class="form_control" type="text" placeholder="dio bau"> -->
+</form>
+
+<form *ngIf="data.type == 'aziende' "[formGroup] = formAziende  >
+  <input type="text" formControlName="azienda_nome">
+  <input type="text" formControlName="azienda_indirizzo">
+  <button class="btn" type="submit" (click)="salva()">salva</button>
+</form>
+
+<form *ngIf="data.type == 'contratti' "[formGroup] = formContratti  >
+  <input type="text" formControlName="contratti_intestatario">
+  <input type="text" formControlName="contratto_azienda">
+  <button class="btn" type="submit" (click)="salva()">salva</button>
 </form>

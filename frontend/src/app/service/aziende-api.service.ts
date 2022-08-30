@@ -17,4 +17,12 @@ export class AziendeApiService {
   getAziende() : Observable<any>{
     return this.http.get<any>(`${this.apiUrl}azienda`);
   }
+
+  editAziende(data: any) : Observable<any>{
+        
+    return this.http.put<any>(`${this.apiUrl}azienda/${data.id}`,data);
+  }
+  showAziende(id: number) : Observable<any> {
+    return this.http.get<any>(`${this.apiUrl}azienda/${id}`)
+  }
 }
